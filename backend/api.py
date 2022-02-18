@@ -4,17 +4,7 @@ import update
 app = FastAPI()
 
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
-
-@app.get("/gym/{cap}")
-def gym(cap: int):
-    return cap * 2
-
-
-@app.get("update.py/get_api")
+@app.get("/update.py/api_to_json")
 def print_api():
-    return update.get_api()
+    return update.api_to_json()
 
