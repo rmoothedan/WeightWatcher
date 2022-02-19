@@ -1,10 +1,12 @@
 import requests
+import datetime
 import json
 
+tupleCount = (2, 19, 18, 21, 25)
+dictOfWeek = {'Sunday': [], 'Monday': [], 'Tuesday': [], 'Wednesday': [],
+              'Thursday': [], 'Friday': [], 'Saturday': []}
 
-# todo figure out data structures to hold parsed JSON
-# todo figure out how to best access fields
-# mooth branch
+
 def get_api():
     payload = {'AccountAPIKey': '7938FC89-A15C-492D-9566-12C961BC1F27'}
     r = requests.get('https://goboardapi.azurewebsites.net/api/FacilityCount/GetCountsByAccount', params=payload)
@@ -12,12 +14,18 @@ def get_api():
 
 
 def api_to_json():
-    apiCall = get_api()
-    apiCall = apiCall.json()
-    apiParsed = parse_json(apiCall)
+    apiCall = get_api().text
+    json_dict = json.loads(apiCall)
+    apiParsed = parse_json(json_dict)
     return apiParsed
 
 
-def parse_json(json_list):
-    json_list
-    return json_list
+def parse_json(json_dict):
+    parsed = [[], [], [], [], []]
+    for i in range(5):
+        parsed[i].append(json_dict[tupleCount[i]])
+    return parsed
+
+
+def update_structure(parsed_json):
+    pass
