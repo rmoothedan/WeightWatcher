@@ -2,7 +2,7 @@ import requests
 import datetime
 import json
 
-tupleCount = (2, 19, 18, 21, 25)
+tupleCount = (2, 10, 18, 21, 25)
 dictOfWeek = {'Sunday': [], 'Monday': [], 'Tuesday': [], 'Wednesday': [],
               'Thursday': [], 'Friday': [], 'Saturday': []}
 
@@ -21,9 +21,9 @@ def api_to_json():
 
 
 def parse_json(json_dict):
-    parsed = [[], [], [], [], []]
+    parsed = []
     for i in range(5):
-        parsed[i].append(json_dict[tupleCount[i]])
+        parsed.append(json_dict[tupleCount[i]])
     return parsed
 
 
