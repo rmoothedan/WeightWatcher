@@ -13,7 +13,7 @@ def parse_user_data(day, level, timeString):
         if startTimes[i][5] == 'P' and startTimes[i][0:2] != "12":
             startTimes[i] = str(int(startTimes[i][0:2]) + 12) + startTimes[i][2:5]
 
-        if endTimes[i][5] == 'P'and endTimes[i][0:2] != 12:
+        if endTimes[i][5] == 'P'and endTimes[i][0:2] != "12":
             endTimes[i] = str(int(endTimes[i][0:2]) + 12) + endTimes[i][2:5]
 
         startTimes[i] = startTimes[i][0:5]
@@ -33,8 +33,7 @@ def increment_time(currTime):
 
     return currTime
 
-def get_week_intervals():
-    week = structures.track_week
+def get_week_intervals(startList, endList):
     startList = ["08:00", "18:30"]
     endList = ["10:00", "20:30"]
     timeList = []
@@ -54,7 +53,3 @@ def get_week_intervals():
 
     return timeList
             
-  
-def get_best_times(timeString):
-    day, startList, endList  = parse_user_data(timeString)
-    
