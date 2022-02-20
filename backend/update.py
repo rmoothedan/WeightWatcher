@@ -136,6 +136,71 @@ def parse_json(json_dict):
         parsed.append(json_dict[tupleCount[i]])
     return parsed
 
+def get_date(parsed_json):
+    track = datetime.date(int(parsed_json[0]["LastUpdatedDateAndTime"][0:4]), int(parsed_json[0]["LastUpdatedDateAndTime"][5:7]),
+     int(parsed_json[0]["LastUpdatedDateAndTime"][8:10]))
+
+    level3 = datetime.date(int(parsed_json[1]["LastUpdatedDateAndTime"][0:4]), int(parsed_json[1]["LastUpdatedDateAndTime"][5:7]),
+     int(parsed_json[1]["LastUpdatedDateAndTime"][8:10]))
+
+    level2 = datetime.date(int(parsed_json[2]["LastUpdatedDateAndTime"][0:4]), int(parsed_json[2]["LastUpdatedDateAndTime"][5:7]),
+     int(parsed_json[2]["LastUpdatedDateAndTime"][8:10]))
+
+    level1 = datetime.date(int(parsed_json[3]["LastUpdatedDateAndTime"][0:4]), int(parsed_json[3]["LastUpdatedDateAndTime"][5:7]),
+     int(parsed_json[3]["LastUpdatedDateAndTime"][8:10]))
+
+    powerHouse = datetime.date(int(parsed_json[4]["LastUpdatedDateAndTime"][0:4]), int(parsed_json[4]["LastUpdatedDateAndTime"][5:7]),
+     int(parsed_json[4]["LastUpdatedDateAndTime"][8:10]))
+
+    return track, level3, level2, level1, powerHouse
+
+def get_time(parsed_json):
+    track = parsed_json[0]["LastUpdatedDateAndTime"][parsed_json[0]["LastUpdatedDateAndTime"].
+    index('T') + 1:parsed_json[0]["LastUpdatedDateAndTime"].index('.')]
+
+    if int(track[3:5]) > 30: # rounds down to nearest half hour
+        track = track[0:3] + "30"
+    else:
+        track = track[0:3] + "00" 
+
+    level3 = parsed_json[1]["LastUpdatedDateAndTime"][parsed_json[1]["LastUpdatedDateAndTime"].
+    index('T') + 1:parsed_json[1]["LastUpdatedDateAndTime"].index('.')]
+
+    if int(level3[3:5]) > 30: # rounds down to nearest half hour
+        level3 = level3[0:3] + "30"
+    else:
+        level3 = level3[0:3] + "00" 
+
+    level2 = parsed_json[2]["LastUpdatedDateAndTime"][parsed_json[2]["LastUpdatedDateAndTime"].
+    index('T') + 1:parsed_json[2]["LastUpdatedDateAndTime"].index('.')]
+
+    if int(level2[3:5]) > 30: # rounds down to nearest half hour
+        level2 = level2[0:3] + "30"
+    else:
+        level2 = level2[0:3] + "00" 
+
+    level1 = parsed_json[3]["LastUpdatedDateAndTime"][parsed_json[3]["LastUpdatedDateAndTime"].
+    index('T') + 1:parsed_json[3]["LastUpdatedDateAndTime"].index('.')]
+
+    if int(level1[3:5]) > 30: # rounds down to nearest half hour
+        level1 = level1[0:3] + "30"
+    else:
+        level1 = level1[0:3] + "00" 
+
+    powerHouse = parsed_json[4]["LastUpdatedDateAndTime"][parsed_json[4]["LastUpdatedDateAndTime"].
+    index('T') + 1:parsed_json[4]["LastUpdatedDateAndTime"].index('.')]
+
+    if int(powerHouse[3:5]) > 30: # rounds down to nearest half hour
+        powerHouse = powerHouse[0:3] + "30"
+    else:
+        powerHouse = powerHouse[0:3] + "00" 
+
+    return track, level3, level2, level1, powerHouse
+
+def get_day(trackDate, lvl3Date, lvl2Date, lvl1Date, phDate):
+    days = {0: 'Monday', 1: 'Tuesday', 2: 'Wednesday', 3: 'Thursday', 4: 'Friday', 5: 'Saturday', 6: 'Sunday'}
+
+    return days[trackDate.weekday()], days[lvl3Date.weekday()], days[lvl2Date.weekday()], days[lvl1Date.weekday()], days[phDate.weekday()]
 
 def get_last_count(parsed_json):
     track = parsed_json[0]['LastCount']
@@ -147,23 +212,11 @@ def get_last_count(parsed_json):
 
 
 def update_structure():
-    # todo
     parsed_json = api_to_json()
-    track = 0
-    lvl3 = 1
-    lvl2 = 2
-    lvl1 = 3
-    ph = 4
-    # for each JSON member
-    date = parsed_json[0]["LastUpdatedDateAndTime"][0:parsed_json[0]["LastUpdatedDateAndTime"].index('T')]
-    time = parsed_json[0]["LastUpdatedDateAndTime"][parsed_json[0]["LastUpdatedDateAndTime"].
-    index('T') + 1:parsed_json[0]["LastUpdatedDateAndTime"].index('.')]
-    
-    # get day
 
-    if int(time[3:5]) > 30: # rounds down to nearest half hour
-        roundTime = time[0:3] + "30"
-        
-        # if DateTime = correct
-            # update today: (prev total + new val) / (count)
-    return roundTime
+    
+
+    trackTime, lvl3Time, lvl2Time, lvl1Time, phTime = get_time(parsed_json)
+    trackDate, lvl3Date, lvl2Date, lvl1Date, phDate = get_date(parsed_json)
+    trackDay, lvl3Day, lvl2Day, lvl1Day, phDay = get_day(trackDate, lvl3Date, lvl2Date, lvl1Date, phDate)
+    return trackDay, lvl3Day, lvl2Day, lvl1Day, phDay
