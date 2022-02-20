@@ -230,25 +230,21 @@ def update_structure():
     trackDay, lvl3Day, lvl2Day, lvl1Day, phDay = get_day(trackDate, lvl3Date, lvl2Date, lvl1Date, phDate)
     trackLC, lvl3LC, lvl2LC, lvl1LC, phLC = get_last_count(parsed_json)
 
-    # access the correct day
-    # access the time we want
-    # add to that Last Count
-    # increment the Update Count
-    track_week[trackDay][trackTime] = track_week[trackDay][trackTime] + trackLC
-    track_week[trackDay]['count'] = track_week[trackDay]['count'] + 1
+    track_week[trackDay].times[trackTime][0] = track_week[trackDay].times[trackTime][0] + trackLC
+    track_week[trackDay].times[trackTime][1] = track_week[trackDay].times[trackTime][1] + 1
 
-    level3_week[trackDay][trackTime] = level3_week[trackDay][trackTime] + trackLC
-    level3_week[trackDay]['count'] = level3_week[trackDay]['count'] + 1
+    level3_week[lvl3Day].times[lvl3Time][0] = level3_week[lvl3Day].times[lvl3Time][0] + lvl3LC
+    level3_week[lvl3Day].times[lvl3Time][1] = level3_week[lvl3Day].times[lvl3Time][1] + 1
 
-    level2_week[trackDay][trackTime] = level2_week[trackDay][trackTime] + trackLC
-    level2_week[trackDay]['count'] = level2_week[trackDay]['count'] + 1
+    level2_week[lvl2Day].times[lvl2Time][0] = level2_week[lvl2Day].times[lvl2Time][0] + lvl2LC
+    level2_week[lvl2Day].times[lvl2Time][1] = level2_week[lvl2Day].times[lvl2Time][1] + 1
 
-    level1_week[trackDay][trackTime] = level1_week[trackDay][trackTime] + trackLC
-    level1_week[trackDay]['count'] = level1_week[trackDay]['count'] + 1
+    level1_week[lvl3Day].times[lvl1Time][0] = level1_week[lvl1Day].times[lvl1Time][0] + lvl1LC
+    level1_week[lvl3Day].times[lvl1Time][1] = level1_week[lvl1Day].times[lvl1Time][1] + 1
 
-    power_week[trackDay][trackTime] = power_week[trackDay][trackTime] + trackLC
-    power_week[trackDay]['count'] = power_week[trackDay]['count'] + 1
-    pass
+    power_week[phDay].times[phTime][0] = power_week[phDay].times[phTime][0] + phLC
+    power_week[phDay].times[phTime][1] = power_week[phDay].times[phTime][1] + 1
+    return "ran updated"
 
 
 def get_weeks():
