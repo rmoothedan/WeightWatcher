@@ -53,3 +53,7 @@ def get_week_intervals(startList, endList):
 
     return timeList
             
+  
+def get_best_times(timeString):
+    day, startList, endList  = parse_user_data(timeString)
+    
