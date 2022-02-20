@@ -202,6 +202,15 @@ def get_day(trackDate, lvl3Date, lvl2Date, lvl1Date, phDate):
 
     return days[trackDate.weekday()], days[lvl3Date.weekday()], days[lvl2Date.weekday()], days[lvl1Date.weekday()], days[phDate.weekday()]
 
+def get_last_count(parsed_json):
+    track = parsed_json[0]['LastCount']
+    level3 = parsed_json[1]['LastCount']
+    level2 = parsed_json[2]['LastCount']
+    level1 = parsed_json[3]['LastCount']
+    powerHouse = parsed_json[4]['LastCount']
+    return track, level3, level2, level1, powerHouse
+
+
 def update_structure():
     parsed_json = api_to_json()
 
