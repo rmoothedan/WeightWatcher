@@ -11,3 +11,8 @@ def print_api():
 @app.get("/update.py/update_structure")
 def print_api():
     return update.update_structure()
+
+@app.get("/update.py/get_weeks")
+def print_api():
+    return update.get_weeks()
+
