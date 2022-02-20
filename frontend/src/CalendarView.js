@@ -1,7 +1,7 @@
 import Kalend, { CalendarView } from 'kalend' // import component
 import 'kalend/dist/styles/index.css'; // import styles
 
-function CAL() {
+function CAL({viewEvents}) {
     return(
         <div  style={{
             height: '100vh'
@@ -10,14 +10,7 @@ function CAL() {
     //   onEventClick={onEventClick}
     //   onNewEventClick={onNewEventClick}
     events={
-        {
-            id: 1,
-            startAt: '2022-02-19T18:03:00.000Z',
-            endAt: '2022-02-19T19:04:00.000Z',
-            summary: 'test',
-            color: 'blue',
-            calendarID: 'Calendar'
-        }
+        viewEvents
     }
     initialDate={new Date().toISOString()}
        hourHeight={60}

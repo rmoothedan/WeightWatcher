@@ -6,6 +6,8 @@ import Calendar from './Calendar.js';
 function App() {
   const [data, setData] = useState(null);
   const [click, setClick] = useState(true);
+  const [viewEvents, setViewEvents] = useState(null);
+
   const host_name = "http://localhost:8000/";
   useEffect(() => {
     fetch(host_name + "update.py/api_to_json", {
@@ -26,8 +28,8 @@ function App() {
   return (
     <div className="App">
       <h3>data</h3>
-      <CAL/>
-      <Calendar/>
+      {viewEvents ? <CAL viewEvents={viewEvents}/> : null}
+      <Calendar setViewEvents={setViewEvents}/>
       <button onClick={() => setClick(~click)}>GET IT KING</button>
     </div>
   );
