@@ -6,10 +6,15 @@ function TimeRangeInput({ freeTime, setFreeTime }) {
   const [day, setDay] = useState(null);
   const [location, setLocation] = useState(null);
 
-  const getBestTime = (baseURL, setFreeTime) => {
-    fetch(baseURL + "PATH TO CALL", {
+  const getBestTime = (day, time, location) => {
+    fetch('http://localhost:8000/' + '/schedule.py/parseUserData/day/'
+    + day
+  + '/level/' +
+  location
+  + '/timeString/'
+  + time, {
       method: "Get",
-      mode: "cors",
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
       },
@@ -40,7 +45,7 @@ function TimeRangeInput({ freeTime, setFreeTime }) {
     event.preventDefault();
     //api call here
     console.log(location, timeRange, day);
-    //getBestTime()
+    getBestTime(day, location, timeRange)
     setLocation("");
     setTimeRange("");
   };
