@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import ApiCalendar from 'react-google-calendar-api';
 
 function Calendar() {
+    const [events, setEvents] = useState(null);
+
     const handleClick = (event) => {
         ApiCalendar.handleAuthClick()
             .then(() => {
@@ -13,15 +16,16 @@ function Calendar() {
 
     const getEvents = () => {
         if (ApiCalendar.sign)
-            ApiCalendar.listEvents({
-                timeMin: new Date().toISOString(),
-                timeMax: new Date().addDays(10).toISOString(),
-                showDeleted: true,
-                maxResults: 10,
-                orderBy: 'updated'
-            }).then(({ result }: any) => {
-                console.log(result.items);
-            });
+  ApiCalendar.listEvents({
+      timeMin: new Date(Date.now()).toISOString(),
+      timeMax: new Date(new Date().getTime()+(10*24*60*60*1000)).toISOString(),
+      showDeleted: true,
+      maxResults: 100,
+      orderBy: 'updated'
+  }).then(({ result }: any) => {
+    console.log(result.items);
+    setEvents(result.items)
+  });
     }
 
     return (
@@ -31,14 +35,16 @@ function Calendar() {
                     handleClick(event)
                 }
             >AUTH GOOGLE</button>
-            { ApiCalendar.sign ? 
             <button
                 onClick={() => {
                     getEvents() 
                 }}>get 10 Events
             </button>
-            : null
-    }   
+            <button
+                onClick={() => {
+                  console.log(events[1].recurrence[0].match(/(BYDAY=)([A-Z,*]{1,7})/g))
+                }}>log today
+            </button>
         </div>
     )
 };

@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import CAL from "./CalendarView";
-import Calendar from './calendar.js';
+import Calendar from './Calendar.js';
 
 function App() {
   const [data, setData] = useState(null);
@@ -27,6 +27,7 @@ function App() {
     <div className="App">
       <h3>data</h3>
       <CAL/>
+      <Calendar/>
       <button onClick={() => setClick(~click)}>GET IT KING</button>
     </div>
   );
