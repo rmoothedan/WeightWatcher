@@ -5,8 +5,8 @@ import schedule
 app = FastAPI()
 
 @app.get("/schedule/")
-def return_best_time(timeString):
-    return schedule.get_best_time(timeString)
+def return_best_times(timeString):
+    return schedule.get_best_times(timeString)
 
 
 @app.get("/update/api_to_json")
