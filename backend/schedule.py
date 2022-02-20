@@ -37,7 +37,7 @@ def get_week_intervals():
     week = structures.track_week
     startList = ["08:00", "18:30"]
     endList = ["10:00", "20:30"]
-    avgList = []
+    timeList = []
 
     for i in range(len(startList)):
         startTime = startList[i]
@@ -50,9 +50,9 @@ def get_week_intervals():
 
             currTime = increment_time(currTime)
         
-        avgList.append(intList)
+        timeList.append(intList)
 
-    return avgList
+    return timeList
             
   
 def get_best_times(timeString):
