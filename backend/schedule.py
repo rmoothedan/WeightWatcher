@@ -1,8 +1,6 @@
 import structures
 
-def parseUserData(timeString):
-    day = timeString[0].upper() + timeString[1:timeString.index(" ")]
-    timeString = timeString[timeString.index(" ") + 1:]
+def parse_user_data(day, level, timeString):
     userTimes = timeString.split(',')
     startTimes = []
     endTimes = []
@@ -21,16 +19,42 @@ def parseUserData(timeString):
         startTimes[i] = startTimes[i][0:5]
         endTimes[i] = endTimes[i][0:5]
 
-    return day, startTimes, endTimes
+    return day, level, startTimes, endTimes
 
-  
-def get_best_times(timeString):
-    day, startList, endList  = parseUserData(timeString)
+
+def increment_time(currTime):
+    if currTime[3] == "3":
+        if len(str(int(currTime[0:2]) + 1)) == 1:
+            currTime = "0" + str(int(currTime[0:2]) + 1) + ":00"
+        else:
+            currTime = str(int(currTime[0:2]) + 1) + ":00"
+    else:
+        currTime = currTime[0:2] + ":30"
+
+    return currTime
+
+def get_week_intervals():
+    week = structures.track_week
+    startList = ["08:00", "18:30"]
+    endList = ["10:00", "20:30"]
     avgList = []
-    for i in startList:
+
+    for i in range(len(startList)):
         startTime = startList[i]
         endTime = endList[i]
-        while not startTime.equals(endTime):
-            avgList = None # for now
-            # access the time, pull average
-            # add 30 to the time
+        currTime = startTime
+        intList = []
+        
+        while not currTime == endTime:
+            intList.append(currTime)
+
+            currTime = increment_time(currTime)
+        
+        avgList.append(intList)
+
+    return avgList
+            
+  
+def get_best_times(timeString):
+    day, startList, endList  = parse_user_data(timeString)
+    

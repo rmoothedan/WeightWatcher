@@ -23,6 +23,10 @@ def print_api():
 def print_api():
     return update.get_weeks()
 
-@app.get("/schedule.py/parseUserData")
+@app.get("/schedule.py/parse_user_data")
 def print_api():
-    return schedule.parseUserData("sunday 12:30PM-04:30PM,07:30PM-10:30PM")
+    return schedule.parse_user_data("Sunday", "Level 1",  "12:30PM-04:30PM,07:30PM-10:30PM")
+
+@app.get("/schedule.py/get_week_intervals")
+def print_api():
+    return schedule.get_week_intervals()
