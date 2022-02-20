@@ -23,6 +23,8 @@ def print_api():
 def print_api():
     return update.get_weeks()
 
+
 @app.get("/schedule.py/parseUserData/day/{day}/level{level}/timeString/{timeString}")
 def print_api(day: str, level: str, timeString: str ):
     return schedule.parseUserData(day, level, timeString)
+
