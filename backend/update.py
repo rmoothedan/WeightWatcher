@@ -146,15 +146,20 @@ def update_structure():
     lvl1 = 3
     ph = 4
     # for each JSON member
-    date = parsed_json[0]["LastUpdatedDateAndTime"][0:parsed_json[0]["LastUpdatedDateAndTime"].index('T')]
+    date1 = datetime.date(int(parsed_json[0]["LastUpdatedDateAndTime"][0:4]), int(parsed_json[0]["LastUpdatedDateAndTime"][5:7]),
+     int(parsed_json[0]["LastUpdatedDateAndTime"][8:10]))
+    day = date1.weekday()
     time = parsed_json[0]["LastUpdatedDateAndTime"][parsed_json[0]["LastUpdatedDateAndTime"].
     index('T') + 1:parsed_json[0]["LastUpdatedDateAndTime"].index('.')]
     
     # get day
+    days = {0: 'Monday', 1: 'Tuesday', 2: 'Wednesday', 3: 'Thursday', 4: 'Friday', 5: 'Saturday', 6: 'Sunday'}
+
+    # use day as key for 'week' dicts
 
     if int(time[3:5]) > 30: # rounds down to nearest half hour
         roundTime = time[0:3] + "30"
         
         # if DateTime = correct
             # update today: (prev total + new val) / (count)
-    return roundTime
+    return days[day]
