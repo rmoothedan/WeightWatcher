@@ -4,7 +4,7 @@ import 'kalend/dist/styles/index.css'; // import styles
 function CAL() {
     return(
         <div  style={{
-            height: '100vh'
+            height: '60vh'
           }}>
     <Kalend
     //   onEventClick={onEventClick}
@@ -20,16 +20,12 @@ function CAL() {
         }
     }
     initialDate={new Date().toISOString()}
-       hourHeight={60}
+       hourHeight={30}
       initialView={CalendarView.WEEK}
-       disabledViews={[CalendarView.DAY]}
-    //   onSelectView={onSelectView}
-    //   selectedView={selectedView}
-    //   onPageChange={onPageChange}
-       timeFormat={'24'}
+       disabledViews={[CalendarView.DAY, CalendarView.MONTH, CalendarView.THREE_DAYS, CalendarView.AGENDA]}
+       timeFormat={'12'}
       weekDayStart={'Monday'}
-    //   calendarIDsHidden={['work']}
-    //   language={'en'}
+      disableMobileDropdown={true}
     />
     </div>
     )
