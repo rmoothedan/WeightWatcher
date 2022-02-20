@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import CAL from "./CalendarView";
 import Calendar from './Calendar.js';
+import TimeRangeInput from "./TimeRangeInput";
 
 function App() {
   const [data, setData] = useState(null);
