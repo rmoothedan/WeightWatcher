@@ -5,8 +5,8 @@ import schedule
 app = FastAPI()
 
 @app.get("/schedule/")
-def return_best_times(timeString):
-    return schedule.get_best_times(timeString)
+def return_best_times(dayString, levelString, timeString):
+    return schedule.get_best_times(dayString, levelString, timeString)
 
 
 @app.get("/update/api_to_json")
@@ -23,10 +23,8 @@ def print_api():
 def print_api():
     return update.get_weeks()
 
-@app.get("/schedule.py/parse_user_data")
-def print_api():
-    return schedule.parse_user_data("Sunday", "Level 1",  "12:30PM-04:30PM,07:30PM-10:30PM")
 
-@app.get("/schedule.py/get_week_intervals")
-def print_api():
-    return schedule.get_week_intervals()
+@app.get("/schedule.py/parseUserData/day/{day}/level{level}/timeString/{timeString}")
+def print_api(day: str, level: str, timeString: str ):
+    return schedule.parseUserData(day, level, timeString)
+
