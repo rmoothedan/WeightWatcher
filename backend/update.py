@@ -137,6 +137,15 @@ def parse_json(json_dict):
     return parsed
 
 
+def get_last_count(parsed_json):
+    track = parsed_json[0]['LastCount']
+    level3 = parsed_json[1]['LastCount']
+    level2 = parsed_json[2]['LastCount']
+    level1 = parsed_json[3]['LastCount']
+    powerHouse = parsed_json[4]['LastCount']
+    return track, level3, level2, level1, powerHouse
+
+
 def update_structure():
     # todo
     parsed_json = api_to_json()
