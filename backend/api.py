@@ -26,5 +26,5 @@ def print_api():
 
 @app.get("/schedule.py/parseUserData/day/{day}/level{level}/timeString/{timeString}")
 def print_api(day: str, level: str, timeString: str ):
-    return schedule.parseUserData(day, level, timeString)
+    return schedule.parse_user_data(day, level, timeString)
 
