@@ -7,6 +7,7 @@ function App() {
   const [data, setData] = useState(null);
   const [click, setClick] = useState(true);
   const [viewEvents, setViewEvents] = useState(null);
+  const [freeTime, setFreeTime] = useState(null);
 
   const host_name = "http://localhost:8000/";
   useEffect(() => {
@@ -14,15 +15,15 @@ function App() {
       method: "Get",
       mode: "cors",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
     })
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => {
-      console.log(error)
-    });
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, [click]);
 
   return (
@@ -31,6 +32,11 @@ function App() {
       {viewEvents ? <CAL viewEvents={viewEvents}/> : null}
       <Calendar setViewEvents={setViewEvents}/>
       <button onClick={() => setClick(~click)}>GET IT KING</button>
+      <h2>
+        Enter time ranges that you can go to the gym below in this format
+        <h3>HH:MM AM/PM-HH:MM AM/PM</h3>
+      </h2>
+      <TimeRangeInput/>
     </div>
   );
 }
