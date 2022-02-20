@@ -7,62 +7,62 @@ tupleCount = (2, 10, 18, 21, 25)
 
 class sunday:
     def __init__(self):
-        self.times = [{'8:00a': None, 'count': 0}, {'8:30a': None, 'count': 0}, {'9:00a': None, 'count': 0},
-                      {'9:30a': None, 'count': 0}, {'10:00a': None, 'count': 0}, {'10:30a': None, 'count': 0},
-                      {'11:00a': None, 'count': 0}, {'11:30a': None, 'count': 0}, {'12:00': None, 'count': 0},
-                      {'12:30': None, 'count': 0}, {'1:00': None, 'count': 0}, {'1:30': None, 'count': 0},
-                      {'2:00': None, 'count': 0}, {'2:30': None, 'count': 0}, {'3:00': None, 'count': 0},
-                      {'3:30': None, 'count': 0}, {'4:00': None, 'count': 0}, {'4:30': None, 'count': 0},
-                      {'5:00': None, 'count': 0}, {'5:30': None, 'count': 0}, {'6:00': None, 'count': 0},
-                      {'6:30': None, 'count': 0}, {'7:00': None, 'count': 0}, {'7:30': None, 'count': 0},
-                      {'8:00': None, 'count': 0}, {'8:30': None, 'count': 0}, {'9:00': None, 'count': 0},
-                      {'9:30': None, 'count': 0}, {'10:00': None, 'count': 0}, {'10:30': None, 'count': 0},
-                      {'11:00': None, 'count': 0}, {'11:30': None, 'count': 0}]
+        self.times = [{'08:00': None, 'count': 0}, {'08:30': None, 'count': 0}, {'09:00': None, 'count': 0},
+                      {'09:30': None, 'count': 0}, {'10:00': None, 'count': 0}, {'10:30': None, 'count': 0},
+                      {'11:00': None, 'count': 0}, {'11:30': None, 'count': 0}, {'12:00': None, 'count': 0},
+                      {'12:30': None, 'count': 0}, {'13:00': None, 'count': 0}, {'13:30': None, 'count': 0},
+                      {'14:00': None, 'count': 0}, {'14:30': None, 'count': 0}, {'15:00': None, 'count': 0},
+                      {'15:30': None, 'count': 0}, {'16:00': None, 'count': 0}, {'16:30': None, 'count': 0},
+                      {'17:00': None, 'count': 0}, {'17:30': None, 'count': 0}, {'18:00': None, 'count': 0},
+                      {'18:30': None, 'count': 0}, {'19:00': None, 'count': 0}, {'19:30': None, 'count': 0},
+                      {'20:00': None, 'count': 0}, {'20:30': None, 'count': 0}, {'21:00': None, 'count': 0},
+                      {'21:30': None, 'count': 0}, {'22:00': None, 'count': 0}, {'22:30': None, 'count': 0},
+                      {'23:00': None, 'count': 0}, {'23:30': None, 'count': 0}]
 
 
 class mon_thurs:
     def __init__(self):
-        self.times = [{'6:00a': None, 'count': 0}, {'6:30a': None, 'count': 0}, {'7:00a': None, 'count': 0},
-                      {'7:30a': None, 'count': 0}, {'8:00a': None, 'count': 0}, {'8:30a': None, 'count': 0},
-                      {'9:00a': None, 'count': 0}, {'9:30a': None, 'count': 0}, {'10:00a': None, 'count': 0},
-                      {'10:30a': None, 'count': 0}, {'11:00a': None, 'count': 0}, {'11:30a': None, 'count': 0},
-                      {'12:00': None, 'count': 0}, {'12:30': None, 'count': 0}, {'1:00': None, 'count': 0},
-                      {'1:30': None, 'count': 0}, {'2:00': None, 'count': 0}, {'2:30': None, 'count': 0},
-                      {'3:00': None, 'count': 0}, {'3:30': None, 'count': 0}, {'4:00': None, 'count': 0},
-                      {'4:30': None, 'count': 0}, {'5:00': None, 'count': 0}, {'5:30': None, 'count': 0},
-                      {'6:00': None, 'count': 0}, {'6:30': None, 'count': 0}, {'7:00': None, 'count': 0},
-                      {'7:30': None, 'count': 0}, {'8:00': None, 'count': 0}, {'8:30': None, 'count': 0},
-                      {'9:00': None, 'count': 0}, {'9:30': None, 'count': 0}, {'10:00': None, 'count': 0},
-                      {'10:30': None, 'count': 0}, {'11:00': None, 'count': 0}, {'11:30': None, 'count': 0}]
+        self.times = [{'06:00': None, 'count': 0}, {'06:30': None, 'count': 0}, {'07:00': None, 'count': 0},
+                      {'07:30': None, 'count': 0}, {'08:00': None, 'count': 0}, {'08:30': None, 'count': 0},
+                      {'09:00': None, 'count': 0}, {'09:30': None, 'count': 0}, {'10:00': None, 'count': 0},
+                      {'10:30': None, 'count': 0}, {'11:00': None, 'count': 0}, {'11:30': None, 'count': 0},
+                      {'12:00': None, 'count': 0}, {'12:30': None, 'count': 0}, {'13:00': None, 'count': 0},
+                      {'13:30': None, 'count': 0}, {'14:00': None, 'count': 0}, {'14:30': None, 'count': 0},
+                      {'15:00': None, 'count': 0}, {'15:30': None, 'count': 0}, {'16:00': None, 'count': 0},
+                      {'16:30': None, 'count': 0}, {'17:00': None, 'count': 0}, {'17:30': None, 'count': 0},
+                      {'18:00': None, 'count': 0}, {'18:30': None, 'count': 0}, {'18:00': None, 'count': 0},
+                      {'19:30': None, 'count': 0}, {'20:00': None, 'count': 0}, {'20:30': None, 'count': 0},
+                      {'21:00': None, 'count': 0}, {'21:30': None, 'count': 0}, {'22:00': None, 'count': 0},
+                      {'22:30': None, 'count': 0}, {'23:00': None, 'count': 0}, {'23:30': None, 'count': 0}]
 
 
 class friday:
     def __init__(self):
-        self.times = [{'6:00a': None, 'count': 0}, {'6:30a': None, 'count': 0}, {'7:00a': None, 'count': 0},
-                      {'7:30a': None, 'count': 0}, {'8:00a': None, 'count': 0}, {'8:30a': None, 'count': 0},
-                      {'9:00a': None, 'count': 0}, {'9:30a': None, 'count': 0}, {'10:00a': None, 'count': 0},
-                      {'10:30a': None, 'count': 0}, {'11:00a': None, 'count': 0}, {'11:30a': None, 'count': 0},
-                      {'12:00': None, 'count': 0}, {'12:30': None, 'count': 0}, {'1:00': None, 'count': 0},
-                      {'1:30': None, 'count': 0}, {'2:00': None, 'count': 0}, {'2:30': None, 'count': 0},
-                      {'3:00': None, 'count': 0}, {'3:30': None, 'count': 0}, {'4:00': None, 'count': 0},
-                      {'4:30': None, 'count': 0}, {'5:00': None, 'count': 0}, {'5:30': None, 'count': 0},
-                      {'6:00': None, 'count': 0}, {'6:30': None, 'count': 0}, {'7:00': None, 'count': 0},
-                      {'7:30': None, 'count': 0}, {'8:00': None, 'count': 0}, {'8:30': None, 'count': 0},
-                      {'9:00': None, 'count': 0}, {'9:30': None, 'count': 0}]
+        self.times = [{'06:00': None, 'count': 0}, {'06:30': None, 'count': 0}, {'07:00': None, 'count': 0},
+                      {'07:30': None, 'count': 0}, {'08:00': None, 'count': 0}, {'08:30': None, 'count': 0},
+                      {'09:00': None, 'count': 0}, {'09:30': None, 'count': 0}, {'10:00': None, 'count': 0},
+                      {'10:30': None, 'count': 0}, {'11:00': None, 'count': 0}, {'11:30': None, 'count': 0},
+                      {'12:00': None, 'count': 0}, {'12:30': None, 'count': 0}, {'13:00': None, 'count': 0},
+                      {'13:30': None, 'count': 0}, {'14:00': None, 'count': 0}, {'14:30': None, 'count': 0},
+                      {'15:00': None, 'count': 0}, {'15:30': None, 'count': 0}, {'16:00': None, 'count': 0},
+                      {'16:30': None, 'count': 0}, {'17:00': None, 'count': 0}, {'17:30': None, 'count': 0},
+                      {'18:00': None, 'count': 0}, {'18:30': None, 'count': 0}, {'19:00': None, 'count': 0},
+                      {'19:30': None, 'count': 0}, {'20:00': None, 'count': 0}, {'20:30': None, 'count': 0},
+                      {'21:00': None, 'count': 0}, {'21:30': None, 'count': 0}]
 
 
 class saturday:
     def __init__(self):
-        self.times = [{'8:00a': None, 'count': 0}, {'8:30a': None, 'count': 0}, {'9:00a': None, 'count': 0},
-                      {'9:30a': None, 'count': 0}, {'10:00a': None, 'count': 0}, {'10:30a': None, 'count': 0},
-                      {'11:00a': None, 'count': 0}, {'11:30a': None, 'count': 0}, {'12:00': None, 'count': 0},
-                      {'12:30': None, 'count': 0}, {'1:00': None, 'count': 0}, {'1:30': None, 'count': 0},
-                      {'2:00': None, 'count': 0}, {'2:30': None, 'count': 0}, {'3:00': None, 'count': 0},
-                      {'3:30': None, 'count': 0}, {'4:00': None, 'count': 0}, {'4:30': None, 'count': 0},
-                      {'5:00': None, 'count': 0}, {'5:30': None, 'count': 0}, {'6:00': None, 'count': 0},
-                      {'6:30': None, 'count': 0}, {'7:00': None, 'count': 0}, {'7:30': None, 'count': 0},
-                      {'8:00': None, 'count': 0}, {'8:30': None, 'count': 0}, {'9:00': None, 'count': 0},
-                      {'9:30': None, 'count': 0}]
+        self.times = [{'08:00': None, 'count': 0}, {'08:30': None, 'count': 0}, {'09:00': None, 'count': 0},
+                      {'09:30': None, 'count': 0}, {'10:00': None, 'count': 0}, {'10:30': None, 'count': 0},
+                      {'11:00': None, 'count': 0}, {'11:30': None, 'count': 0}, {'12:00': None, 'count': 0},
+                      {'12:30': None, 'count': 0}, {'13:00': None, 'count': 0}, {'13:30': None, 'count': 0},
+                      {'14:00': None, 'count': 0}, {'14:30': None, 'count': 0}, {'15:00': None, 'count': 0},
+                      {'15:30': None, 'count': 0}, {'16:00': None, 'count': 0}, {'16:30': None, 'count': 0},
+                      {'17:00': None, 'count': 0}, {'17:30': None, 'count': 0}, {'18:00': None, 'count': 0},
+                      {'18:30': None, 'count': 0}, {'19:00': None, 'count': 0}, {'19:30': None, 'count': 0},
+                      {'20:00': None, 'count': 0}, {'20:30': None, 'count': 0}, {'21:00': None, 'count': 0},
+                      {'21:30': None, 'count': 0}]
 
 
 trackSun = sunday()
