@@ -7,7 +7,7 @@ tupleCount = (2, 10, 18, 21, 25)
 
 class sunday:
     def __init__(self):
-        self.times = {{'8:00a': None, 'count': 0}, {'8:30a': None, 'count': 0}, {'9:00a': None, 'count': 0},
+        self.times = [{'8:00a': None, 'count': 0}, {'8:30a': None, 'count': 0}, {'9:00a': None, 'count': 0},
                       {'9:30a': None, 'count': 0}, {'10:00a': None, 'count': 0}, {'10:30a': None, 'count': 0},
                       {'11:00a': None, 'count': 0}, {'11:30a': None, 'count': 0}, {'12:00': None, 'count': 0},
                       {'12:30': None, 'count': 0}, {'1:00': None, 'count': 0}, {'1:30': None, 'count': 0},
@@ -17,12 +17,12 @@ class sunday:
                       {'6:30': None, 'count': 0}, {'7:00': None, 'count': 0}, {'7:30': None, 'count': 0},
                       {'8:00': None, 'count': 0}, {'8:30': None, 'count': 0}, {'9:00': None, 'count': 0},
                       {'9:30': None, 'count': 0}, {'10:00': None, 'count': 0}, {'10:30': None, 'count': 0},
-                      {'11:00': None, 'count': 0}, {'11:30': None, 'count': 0}}
+                      {'11:00': None, 'count': 0}, {'11:30': None, 'count': 0}]
 
 
 class mon_thurs:
     def __init__(self):
-        self.times = {{'6:00a': None, 'count': 0}, {'6:30a': None, 'count': 0}, {'7:00a': None, 'count': 0},
+        self.times = [{'6:00a': None, 'count': 0}, {'6:30a': None, 'count': 0}, {'7:00a': None, 'count': 0},
                       {'7:30a': None, 'count': 0}, {'8:00a': None, 'count': 0}, {'8:30a': None, 'count': 0},
                       {'9:00a': None, 'count': 0}, {'9:30a': None, 'count': 0}, {'10:00a': None, 'count': 0},
                       {'10:30a': None, 'count': 0}, {'11:00a': None, 'count': 0}, {'11:30a': None, 'count': 0},
@@ -33,12 +33,12 @@ class mon_thurs:
                       {'6:00': None, 'count': 0}, {'6:30': None, 'count': 0}, {'7:00': None, 'count': 0},
                       {'7:30': None, 'count': 0}, {'8:00': None, 'count': 0}, {'8:30': None, 'count': 0},
                       {'9:00': None, 'count': 0}, {'9:30': None, 'count': 0}, {'10:00': None, 'count': 0},
-                      {'10:30': None, 'count': 0}, {'11:00': None, 'count': 0}, {'11:30': None, 'count': 0}}
+                      {'10:30': None, 'count': 0}, {'11:00': None, 'count': 0}, {'11:30': None, 'count': 0}]
 
 
 class friday:
     def __init__(self):
-        self.times = {{'6:00a': None, 'count': 0}, {'6:30a': None, 'count': 0}, {'7:00a': None, 'count': 0},
+        self.times = [{'6:00a': None, 'count': 0}, {'6:30a': None, 'count': 0}, {'7:00a': None, 'count': 0},
                       {'7:30a': None, 'count': 0}, {'8:00a': None, 'count': 0}, {'8:30a': None, 'count': 0},
                       {'9:00a': None, 'count': 0}, {'9:30a': None, 'count': 0}, {'10:00a': None, 'count': 0},
                       {'10:30a': None, 'count': 0}, {'11:00a': None, 'count': 0}, {'11:30a': None, 'count': 0},
@@ -48,12 +48,12 @@ class friday:
                       {'4:30': None, 'count': 0}, {'5:00': None, 'count': 0}, {'5:30': None, 'count': 0},
                       {'6:00': None, 'count': 0}, {'6:30': None, 'count': 0}, {'7:00': None, 'count': 0},
                       {'7:30': None, 'count': 0}, {'8:00': None, 'count': 0}, {'8:30': None, 'count': 0},
-                      {'9:00': None, 'count': 0}, {'9:30': None, 'count': 0}}
+                      {'9:00': None, 'count': 0}, {'9:30': None, 'count': 0}]
 
 
 class saturday:
     def __init__(self):
-        self.times = {{'8:00a': None, 'count': 0}, {'8:30a': None, 'count': 0}, {'9:00a': None, 'count': 0},
+        self.times = [{'8:00a': None, 'count': 0}, {'8:30a': None, 'count': 0}, {'9:00a': None, 'count': 0},
                       {'9:30a': None, 'count': 0}, {'10:00a': None, 'count': 0}, {'10:30a': None, 'count': 0},
                       {'11:00a': None, 'count': 0}, {'11:30a': None, 'count': 0}, {'12:00': None, 'count': 0},
                       {'12:30': None, 'count': 0}, {'1:00': None, 'count': 0}, {'1:30': None, 'count': 0},
@@ -62,7 +62,7 @@ class saturday:
                       {'5:00': None, 'count': 0}, {'5:30': None, 'count': 0}, {'6:00': None, 'count': 0},
                       {'6:30': None, 'count': 0}, {'7:00': None, 'count': 0}, {'7:30': None, 'count': 0},
                       {'8:00': None, 'count': 0}, {'8:30': None, 'count': 0}, {'9:00': None, 'count': 0},
-                      {'9:30': None, 'count': 0}}
+                      {'9:30': None, 'count': 0}]
 
 
 trackSun = sunday()
@@ -140,6 +140,6 @@ def parse_json(json_dict):
 def update_structure(parsed_json):
     # todo
     # for each JSON member
-        # if DateTime = correct
+        # if DateTime is correct
             # update today: (prev avg + new val) / (n+1)
     pass
