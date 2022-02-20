@@ -8,3 +8,6 @@ app = FastAPI()
 def print_api():
     return update.api_to_json()
 
+@app.get("/update.py/update_structure")
+def print_api():
+    return update.update_structure()
