@@ -53,8 +53,8 @@ class friday:
 
 class saturday:
     def __init__(self):
-        self.times = {'08:00': [0, 0], '08:30': [0, 0], '09:00': [0, 0], '09:30': [0, 0], '10:00': [0, 0],
-                      '10:30': [0, 0],
+        self.times = {'08:00': [0, 0], '08:30': [0, 0], '09:00': [0, 0],
+                      '09:30': [0, 0], '10:00': [0, 0], '10:30': [0, 0],
                       '11:00': [0, 0], '11:30': [0, 0], '12:00': [0, 0],
                       '12:30': [0, 0], '13:00': [0, 0], '13:30': [0, 0],
                       '14:00': [0, 0], '14:30': [0, 0], '15:00': [0, 0],
@@ -161,44 +161,45 @@ def get_date(parsed_json):
 
 
 def get_time(parsed_json):
-    track = parsed_json[0]["LastUpdatedDateAndTime"][
-            parsed_json[0]["LastUpdatedDateAndTime"].index('T') + 1:parsed_json[0]["LastUpdatedDateAndTime"].index('.')]
+    track = parsed_json[0]["LastUpdatedDateAndTime"][parsed_json[0]["LastUpdatedDateAndTime"].
+                                                         index('T') + 1:parsed_json[0]["LastUpdatedDateAndTime"].index(
+        '.')]
 
     if int(track[3:5]) > 30:  # rounds down to nearest half hour
         track = track[0:3] + "30"
     else:
         track = track[0:3] + "00"
 
-    level3 = parsed_json[1]["LastUpdatedDateAndTime"][
-             parsed_json[1]["LastUpdatedDateAndTime"].index('T') + 1:parsed_json[1]["LastUpdatedDateAndTime"].index(
-                 '.')]
+    level3 = parsed_json[1]["LastUpdatedDateAndTime"][parsed_json[1]["LastUpdatedDateAndTime"].
+                                                          index('T') + 1:parsed_json[1]["LastUpdatedDateAndTime"].index(
+        '.')]
 
     if int(level3[3:5]) > 30:  # rounds down to nearest half hour
         level3 = level3[0:3] + "30"
     else:
         level3 = level3[0:3] + "00"
 
-    level2 = parsed_json[2]["LastUpdatedDateAndTime"][
-             parsed_json[2]["LastUpdatedDateAndTime"].index('T') + 1:parsed_json[2]["LastUpdatedDateAndTime"].index(
-                 '.')]
+    level2 = parsed_json[2]["LastUpdatedDateAndTime"][parsed_json[2]["LastUpdatedDateAndTime"].
+                                                          index('T') + 1:parsed_json[2]["LastUpdatedDateAndTime"].index(
+        '.')]
 
     if int(level2[3:5]) > 30:  # rounds down to nearest half hour
         level2 = level2[0:3] + "30"
     else:
         level2 = level2[0:3] + "00"
 
-    level1 = parsed_json[3]["LastUpdatedDateAndTime"][
-             parsed_json[3]["LastUpdatedDateAndTime"].index('T') + 1:parsed_json[3]["LastUpdatedDateAndTime"].index(
-                 '.')]
+    level1 = parsed_json[3]["LastUpdatedDateAndTime"][parsed_json[3]["LastUpdatedDateAndTime"].
+                                                          index('T') + 1:parsed_json[3]["LastUpdatedDateAndTime"].index(
+        '.')]
 
     if int(level1[3:5]) > 30:  # rounds down to nearest half hour
         level1 = level1[0:3] + "30"
     else:
         level1 = level1[0:3] + "00"
 
-    powerHouse = parsed_json[4]["LastUpdatedDateAndTime"][
-                 parsed_json[4]["LastUpdatedDateAndTime"].index('T') + 1:parsed_json[4]["LastUpdatedDateAndTime"].index(
-                     '.')]
+    powerHouse = parsed_json[4]["LastUpdatedDateAndTime"][parsed_json[4]["LastUpdatedDateAndTime"].
+                                                              index('T') + 1:parsed_json[4][
+                                                              "LastUpdatedDateAndTime"].index('.')]
 
     if int(powerHouse[3:5]) > 30:  # rounds down to nearest half hour
         powerHouse = powerHouse[0:3] + "30"
@@ -244,7 +245,8 @@ def update_structure():
 
     power_week[phDay].times[phTime][0] = power_week[phDay].times[phTime][0] + phLC
     power_week[phDay].times[phTime][1] = power_week[phDay].times[phTime][1] + 1
-    return "ran updated"
+    
+    return trackLC
 
 
 def get_weeks():
