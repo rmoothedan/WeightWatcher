@@ -59,6 +59,7 @@ def get_intervals_avgs(week, intervalsList):
         interval = intervalsList[i]
         for time in interval:
            avgsList.append(week[time][0] / week[time][1])
+    return avgsList
 
 
 def get_best_times(day, level, timeString):
