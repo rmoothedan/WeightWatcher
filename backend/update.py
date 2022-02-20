@@ -137,9 +137,24 @@ def parse_json(json_dict):
     return parsed
 
 
-def update_structure(parsed_json):
+def update_structure():
     # todo
+    parsed_json = api_to_json()
+    track = 0
+    lvl3 = 1
+    lvl2 = 2
+    lvl1 = 3
+    ph = 4
     # for each JSON member
-        # if DateTime is correct
-            # update today: (prev avg + new val) / (n+1)
-    pass
+    date = parsed_json[0]["LastUpdatedDateAndTime"][0:parsed_json[0]["LastUpdatedDateAndTime"].index('T')]
+    time = parsed_json[0]["LastUpdatedDateAndTime"][parsed_json[0]["LastUpdatedDateAndTime"].
+    index('T') + 1:parsed_json[0]["LastUpdatedDateAndTime"].index('.')]
+    
+    # get day
+
+    if int(time[3:5]) > 30: # rounds down to nearest half hour
+        roundTime = time[0:3] + "30"
+        
+        # if DateTime = correct
+            # update today: (prev total + new val) / (count)
+    return roundTime
