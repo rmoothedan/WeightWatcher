@@ -8,61 +8,60 @@ tupleCount = (2, 10, 18, 21, 25)
 class sunday:
     def __init__(self):
         self.times = {'08:00': [0, 0]}, {'08:30': [0, 0]}, {'09:00': [0, 0]},
-        {'09:30': [0, 0]}, {'10:00': [0, 0]}, {'10:30': [0, 0]},
-        {'11:00': [0, 0]}, {'11:30': [0, 0]}, {'12:00': [0, 0]},
-        {'12:30': [0, 0]}, {'13:00': [0, 0]}, {'13:30': [0, 0]},
-        {'14:00': [0, 0]}, {'14:30': [0, 0]}, {'15:00': [0, 0]},
-        {'15:30': [0, 0]}, {'16:00': [0, 0]}, {'16:30': [0, 0]},
-        {'17:00': [0, 0]}, {'17:30': [0, 0]}, {'18:00': [0, 0]},
-        {'18:30': [0, 0]}, {'19:00': [0, 0]}, {'19:30': [0, 0]},
-        {'20:00': [0, 0]}, {'20:30': [0, 0]}, {'21:00': [0, 0]},
-        {'21:30': [0, 0]}, {'22:00': [0, 0]}, {'22:30': [0, 0]},
-        {'23:00': [0, 0]}, {'23:30': [0, 0]}
+                      {'09:30': [0, 0]}, {'10:00': [0, 0]}, {'10:30': [0, 0]},
+                      {'11:00': [0, 0]}, {'11:30': [0, 0]}, {'12:00': [0, 0]},
+                      {'12:30': [0, 0]}, {'13:00': [0, 0]}, {'13:30': [0, 0]},
+                      {'14:00': [0, 0]}, {'14:30': [0, 0]}, {'15:00': [0, 0]},
+                      {'15:30': [0, 0]}, {'16:00': [0, 0]}, {'16:30': [0, 0]},
+                      {'17:00': [0, 0]}, {'17:30': [0, 0]}, {'18:00': [0, 0]},
+                      {'18:30': [0, 0]}, {'19:00': [0, 0]}, {'19:30': [0, 0]},
+                      {'20:00': [0, 0]}, {'20:30': [0, 0]}, {'21:00': [0, 0]},
+                      {'21:30': [0, 0]}, {'22:00': [0, 0]}, {'22:30': [0, 0]},
+                      {'23:00': [0, 0]}, {'23:30': [0, 0]}
 
 
 class mon_thurs:
     def __init__(self):
         self.times = {'06:00': [0, 0]}, {'06:30': [0, 0]}, {'07:00': [0, 0]},
-        {'07:30': [0, 0]}, {'08:00': [0, 0]}, {'08:30': [0, 0]},
-        {'09:00': [0, 0]}, {'09:30': [0, 0]}, {'10:00': [0, 0]},
-        {'10:30': [0, 0]}, {'11:00': [0, 0]}, {'11:30': [0, 0]},
-        {'12:00': [0, 0]}, {'12:30': [0, 0]}, {'13:00': [0, 0]},
-        {'13:30': [0, 0]}, {'14:00': [0, 0]}, {'14:30': [0, 0]},
-        {'15:00': [0, 0]}, {'15:30': [0, 0]}, {'16:00': [0, 0]},
-        {'16:30': [0, 0]}, {'17:00': [0, 0]}, {'17:30': [0, 0]},
-        {'18:00': [0, 0]}, {'18:30': [0, 0]}, {'18:00': [0, 0]},
-        {'19:30': [0, 0]}, {'20:00': [0, 0]}, {'20:30': [0, 0]},
-        {'21:00': [0, 0]}, {'21:30': [0, 0]}, {'22:00': [0, 0]},
-        {'22:30': [0, 0]}, {'23:00': [0, 0]}, {'23:30': [0, 0]}
+                      {'07:30': [0, 0]}, {'08:00': [0, 0]}, {'08:30': [0, 0]},
+                      {'09:00': [0, 0]}, {'09:30': [0, 0]}, {'10:00': [0, 0]},
+                      {'10:30': [0, 0]}, {'11:00': [0, 0]}, {'11:30': [0, 0]},
+                      {'12:00': [0, 0]}, {'12:30': [0, 0]}, {'13:00': [0, 0]},
+                      {'13:30': [0, 0]}, {'14:00': [0, 0]}, {'14:30': [0, 0]},
+                      {'15:00': [0, 0]}, {'15:30': [0, 0]}, {'16:00': [0, 0]},
+                      {'16:30': [0, 0]}, {'17:00': [0, 0]}, {'17:30': [0, 0]},
+                      {'18:00': [0, 0]}, {'18:30': [0, 0]}, {'18:00': [0, 0]},
+                      {'19:30': [0, 0]}, {'20:00': [0, 0]}, {'20:30': [0, 0]},
+                      {'21:00': [0, 0]}, {'21:30': [0, 0]}, {'22:00': [0, 0]},
+                      {'22:30': [0, 0]}, {'23:00': [0, 0]}, {'23:30': [0, 0]}
 
 
 class friday:
     def __init__(self):
         self.times = {'06:00': [0, 0]}, {'06:30': [0, 0]}, {'07:00': [0, 0]},
-        {'07:30': [0, 0]}, {'08:00': [0, 0]}, {'08:30': [0, 0]},
-        {'09:00': [0, 0]}, {'09:30': [0, 0]}, {'10:00': [0, 0]},
-        {'10:30': [0, 0]}, {'11:00': [0, 0]}, {'11:30': [0, 0]},
-        {'12:00': [0, 0]}, {'12:30': [0, 0]}, {'13:00': [0, 0]},
-        {'13:30': [0, 0]}, {'14:00': [0, 0]}, {'14:30': [0, 0]},
-        {'15:00': [0, 0]}, {'15:30': [0, 0]}, {'16:00': [0, 0]},
-        {'16:30': [0, 0]}, {'17:00': [0, 0]}, {'17:30': [0, 0]},
-        {'18:00': [0, 0]}, {'18:30': [0, 0]}, {'19:00': [0, 0]},
-        {'19:30': [0, 0]}, {'20:00': [0, 0]}, {'20:30': [0, 0]},
-        {'21:00': [0, 0]}, {'21:30': [0, 0]}
+                      {'07:30': [0, 0]}, {'08:00': [0, 0]}, {'08:30': [0, 0]},
+                      {'09:00': [0, 0]}, {'09:30': [0, 0]}, {'10:00': [0, 0]},
+                      {'10:30': [0, 0]}, {'11:00': [0, 0]}, {'11:30': [0, 0]},
+                      {'12:00': [0, 0]}, {'12:30': [0, 0]}, {'13:00': [0, 0]},
+                      {'13:30': [0, 0]}, {'14:00': [0, 0]}, {'14:30': [0, 0]},
+                      {'15:00': [0, 0]}, {'15:30': [0, 0]}, {'16:00': [0, 0]},
+                      {'16:30': [0, 0]}, {'17:00': [0, 0]}, {'17:30': [0, 0]},
+                      {'18:00': [0, 0]}, {'18:30': [0, 0]}, {'19:00': [0, 0]},
+                      {'19:30': [0, 0]}, {'20:00': [0, 0]}, {'20:30': [0, 0]},
+                      {'21:00': [0, 0]}, {'21:30': [0, 0]}
 
 
 class saturday:
     def __init__(self):
-        self.times = {'08:00': [0, 0]}, {'08:30': [0, 0]}, {'09:00': [0, 0]}, {
-            '09:30': [0, 0]}, {'10:00': [0, 0]}, {'10:30': [0, 0]},
-        {'11:00': [0, 0]}, {'11:30': [0, 0]}, {'12:00': [0, 0]},
-        {'12:30': [0, 0]}, {'13:00': [0, 0]}, {'13:30': [0, 0]},
-        {'14:00': [0, 0]}, {'14:30': [0, 0]}, {'15:00': [0, 0]},
-        {'15:30': [0, 0]}, {'16:00': [0, 0]}, {'16:30': [0, 0]},
-        {'17:00': [0, 0]}, {'17:30': [0, 0]}, {'18:00': [0, 0]},
-        {'18:30': [0, 0]}, {'19:00': [0, 0]}, {'19:30': [0, 0]},
-        {'20:00': [0, 0]}, {'20:30': [0, 0]}, {'21:00': [0, 0]},
-        {'21:30': [0, 0]}
+        self.times = {'08:00': [0, 0]}, {'08:30': [0, 0]}, {'09:00': [0, 0]}, {'09:30': [0, 0]}, {'10:00': [0, 0]}, {'10:30': [0, 0]},
+                      {'11:00': [0, 0]}, {'11:30': [0, 0]}, {'12:00': [0, 0]},
+                      {'12:30': [0, 0]}, {'13:00': [0, 0]}, {'13:30': [0, 0]},
+                      {'14:00': [0, 0]}, {'14:30': [0, 0]}, {'15:00': [0, 0]},
+                      {'15:30': [0, 0]}, {'16:00': [0, 0]}, {'16:30': [0, 0]},
+                      {'17:00': [0, 0]}, {'17:30': [0, 0]}, {'18:00': [0, 0]},
+                      {'18:30': [0, 0]}, {'19:00': [0, 0]}, {'19:30': [0, 0]},
+                      {'20:00': [0, 0]}, {'20:30': [0, 0]}, {'21:00': [0, 0]},
+                      {'21:30': [0, 0]}
 
 
 trackSun = sunday()
@@ -119,8 +118,7 @@ power_week = {'Sunday': powerSun, 'Monday': powerMon, 'Tuesday': powerTues, 'Wed
 
 def get_api():
     payload = {'AccountAPIKey': '7938FC89-A15C-492D-9566-12C961BC1F27'}
-    r = requests.get(
-        'https://goboardapi.azurewebsites.net/api/FacilityCount/GetCountsByAccount', params=payload)
+    r = requests.get('https://goboardapi.azurewebsites.net/api/FacilityCount/GetCountsByAccount', params=payload)
     return r
 
 
@@ -137,76 +135,71 @@ def parse_json(json_dict):
         parsed.append(json_dict[tupleCount[i]])
     return parsed
 
-
 def get_date(parsed_json):
     track = datetime.date(int(parsed_json[0]["LastUpdatedDateAndTime"][0:4]), int(parsed_json[0]["LastUpdatedDateAndTime"][5:7]),
-                          int(parsed_json[0]["LastUpdatedDateAndTime"][8:10]))
+     int(parsed_json[0]["LastUpdatedDateAndTime"][8:10]))
 
     level3 = datetime.date(int(parsed_json[1]["LastUpdatedDateAndTime"][0:4]), int(parsed_json[1]["LastUpdatedDateAndTime"][5:7]),
-                           int(parsed_json[1]["LastUpdatedDateAndTime"][8:10]))
+     int(parsed_json[1]["LastUpdatedDateAndTime"][8:10]))
 
     level2 = datetime.date(int(parsed_json[2]["LastUpdatedDateAndTime"][0:4]), int(parsed_json[2]["LastUpdatedDateAndTime"][5:7]),
-                           int(parsed_json[2]["LastUpdatedDateAndTime"][8:10]))
+     int(parsed_json[2]["LastUpdatedDateAndTime"][8:10]))
 
     level1 = datetime.date(int(parsed_json[3]["LastUpdatedDateAndTime"][0:4]), int(parsed_json[3]["LastUpdatedDateAndTime"][5:7]),
-                           int(parsed_json[3]["LastUpdatedDateAndTime"][8:10]))
+     int(parsed_json[3]["LastUpdatedDateAndTime"][8:10]))
 
     powerHouse = datetime.date(int(parsed_json[4]["LastUpdatedDateAndTime"][0:4]), int(parsed_json[4]["LastUpdatedDateAndTime"][5:7]),
-                               int(parsed_json[4]["LastUpdatedDateAndTime"][8:10]))
+     int(parsed_json[4]["LastUpdatedDateAndTime"][8:10]))
 
     return track, level3, level2, level1, powerHouse
-
 
 def get_time(parsed_json):
     track = parsed_json[0]["LastUpdatedDateAndTime"][parsed_json[0]["LastUpdatedDateAndTime"].
-                                                     index('T') + 1:parsed_json[0]["LastUpdatedDateAndTime"].index('.')]
+    index('T') + 1:parsed_json[0]["LastUpdatedDateAndTime"].index('.')]
 
-    if int(track[3:5]) > 30:  # rounds down to nearest half hour
+    if int(track[3:5]) > 30: # rounds down to nearest half hour
         track = track[0:3] + "30"
     else:
-        track = track[0:3] + "00"
+        track = track[0:3] + "00" 
 
     level3 = parsed_json[1]["LastUpdatedDateAndTime"][parsed_json[1]["LastUpdatedDateAndTime"].
-                                                      index('T') + 1:parsed_json[1]["LastUpdatedDateAndTime"].index('.')]
+    index('T') + 1:parsed_json[1]["LastUpdatedDateAndTime"].index('.')]
 
-    if int(level3[3:5]) > 30:  # rounds down to nearest half hour
+    if int(level3[3:5]) > 30: # rounds down to nearest half hour
         level3 = level3[0:3] + "30"
     else:
-        level3 = level3[0:3] + "00"
+        level3 = level3[0:3] + "00" 
 
     level2 = parsed_json[2]["LastUpdatedDateAndTime"][parsed_json[2]["LastUpdatedDateAndTime"].
-                                                      index('T') + 1:parsed_json[2]["LastUpdatedDateAndTime"].index('.')]
+    index('T') + 1:parsed_json[2]["LastUpdatedDateAndTime"].index('.')]
 
-    if int(level2[3:5]) > 30:  # rounds down to nearest half hour
+    if int(level2[3:5]) > 30: # rounds down to nearest half hour
         level2 = level2[0:3] + "30"
     else:
-        level2 = level2[0:3] + "00"
+        level2 = level2[0:3] + "00" 
 
     level1 = parsed_json[3]["LastUpdatedDateAndTime"][parsed_json[3]["LastUpdatedDateAndTime"].
-                                                      index('T') + 1:parsed_json[3]["LastUpdatedDateAndTime"].index('.')]
+    index('T') + 1:parsed_json[3]["LastUpdatedDateAndTime"].index('.')]
 
-    if int(level1[3:5]) > 30:  # rounds down to nearest half hour
+    if int(level1[3:5]) > 30: # rounds down to nearest half hour
         level1 = level1[0:3] + "30"
     else:
-        level1 = level1[0:3] + "00"
+        level1 = level1[0:3] + "00" 
 
     powerHouse = parsed_json[4]["LastUpdatedDateAndTime"][parsed_json[4]["LastUpdatedDateAndTime"].
-                                                          index('T') + 1:parsed_json[4]["LastUpdatedDateAndTime"].index('.')]
+    index('T') + 1:parsed_json[4]["LastUpdatedDateAndTime"].index('.')]
 
-    if int(powerHouse[3:5]) > 30:  # rounds down to nearest half hour
+    if int(powerHouse[3:5]) > 30: # rounds down to nearest half hour
         powerHouse = powerHouse[0:3] + "30"
     else:
-        powerHouse = powerHouse[0:3] + "00"
+        powerHouse = powerHouse[0:3] + "00" 
 
     return track, level3, level2, level1, powerHouse
 
-
 def get_day(trackDate, lvl3Date, lvl2Date, lvl1Date, phDate):
-    days = {0: 'Monday', 1: 'Tuesday', 2: 'Wednesday',
-            3: 'Thursday', 4: 'Friday', 5: 'Saturday', 6: 'Sunday'}
+    days = {0: 'Monday', 1: 'Tuesday', 2: 'Wednesday', 3: 'Thursday', 4: 'Friday', 5: 'Saturday', 6: 'Sunday'}
 
     return days[trackDate.weekday()], days[lvl3Date.weekday()], days[lvl2Date.weekday()], days[lvl1Date.weekday()], days[phDate.weekday()]
-
 
 def get_last_count(parsed_json):
     track = parsed_json[0]['LastCount']
@@ -222,8 +215,7 @@ def update_structure():
 
     trackTime, lvl3Time, lvl2Time, lvl1Time, phTime = get_time(parsed_json)
     trackDate, lvl3Date, lvl2Date, lvl1Date, phDate = get_date(parsed_json)
-    trackDay, lvl3Day, lvl2Day, lvl1Day, phDay = get_day(
-        trackDate, lvl3Date, lvl2Date, lvl1Date, phDate)
+    trackDay, lvl3Day, lvl2Day, lvl1Day, phDay = get_day(trackDate, lvl3Date, lvl2Date, lvl1Date, phDate)
     trackLC, lvl3LC, lvl2LC, lvl1LC, phLC = get_last_count(parsed_json)
 
     return trackDay, lvl3Day, lvl2Day, lvl1Day, phDay
